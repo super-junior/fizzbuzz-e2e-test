@@ -25,7 +25,7 @@ public class FirstTest {
         capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone 11 Pro");
         capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "iOS");
         capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "13.4");
-        capabilities.setCapability(MobileCapabilityType.APP, "/Users/aphinyaphothiphan/Library/Developer/Xcode/DerivedData/FizzBuzz-bhkdovynjgcghvamqmvfbouptlfk/Build/Products/Debug-iphonesimulator/FizzBuzz.app");
+        capabilities.setCapability(MobileCapabilityType.APP, "/tmp/application/FizzBuzz.app");
         capabilities.setCapability(MobileCapabilityType.NO_RESET, true);
         capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "XCUITest");
 //        capabilities.setCapability("useNewWDA", false);
