@@ -40,8 +40,7 @@ public class DisplaysTextTest {
 
         driver = new IOSDriver<IOSElement>(url, capabilities);
         driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-        firstScreen = new FirstScreen(driver);
-        secondScreen = new SecondScreen(driver);
+
     }
 
     @AfterSuite
@@ -51,9 +50,12 @@ public class DisplaysTextTest {
 
     @Test
     public void verifyDisplayText(){
+        firstScreen = new FirstScreen(driver);
         firstScreen.clearTextField();
         firstScreen.inputText("8");
         firstScreen.pressGoButton();
+
+        secondScreen = new SecondScreen(driver);
         String textDisplay = secondScreen.getDisplayText();
         Assert.assertEquals(textDisplay, "8");
     }
