@@ -5,10 +5,9 @@ import io.appium.java_client.ios.IOSElement;
 
 public class SecondScreen extends BaseScreen{
 
-    public IOSDriver<IOSElement> driver;
 
-    public SecondScreen(IOSDriver iosDriver){
-        this.driver = iosDriver;
+    public SecondScreen(IOSDriver iosDriver) {
+        super(iosDriver);
     }
 
     public String getDisplayText(){

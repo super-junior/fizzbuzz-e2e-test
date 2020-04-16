@@ -1,24 +1,26 @@
 package pageobject;
 
+import io.appium.java_client.MobileElement;
 import io.appium.java_client.ios.IOSDriver;
-import io.appium.java_client.ios.IOSElement;
 
 public class FirstScreen extends BaseScreen{
-    public IOSDriver<IOSElement> driver;
 
-    public FirstScreen(IOSDriver iosDriver){
-        this.driver = iosDriver;
+    public MobileElement inputText = driver.findElementByAccessibilityId("texfield");
+    public MobileElement goButton =  driver.findElementByAccessibilityId("submitButton");
+
+    public FirstScreen(IOSDriver iosDriver) {
+        super(iosDriver);
     }
 
     public void clearTextField(){
-        driver.findElementByAccessibilityId("texfield").clear();
+        inputText.clear();
     }
 
-    public void inputText(String inputText){
-        driver.findElementByAccessibilityId("texfield").sendKeys(inputText);
+    public void inputText(String text){
+        inputText.sendKeys(text);
     }
 
     public void pressGoButton(){
-        driver.findElementByAccessibilityId("submitButton").click();
+        goButton.click();
     }
 }
